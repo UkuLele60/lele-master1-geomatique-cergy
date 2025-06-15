@@ -19,6 +19,9 @@ def total_coords_count(geom):
 # ------------------------------------------
 # Fonction de simplification adaptative :
 # Réduit le nombre de points d’un polygone jusqu’à atteindre environ `target_points`
+#Le target point est le nombre de point (couple de coordonnées) d'un polygone au delà duquel
+#la géométrie est généralement trop grande pour être contenu dans une seule case d'un fichier excel,
+#il faut donc simplifier et réduire le nombre de points.
 # ------------------------------------------
 def adaptive_polygon_simplify(geom, target_points=780, max_iterations=400):
     original = total_coords_count(geom)
