@@ -6,9 +6,9 @@ from shapely.geometry import shape, Polygon, MultiPolygon, mapping
 # ------------------------------------------
 # Fonction pour compter le nombre total de points (couples de coordonnées)
 # dans tous les anneaux (exterieur + intérieurs) d’un polygone. En effet, 
-dans l'arborescence d'un geojson, il y a "coordinates", qui mène soit 
-vers une liste de couple de coordonnées directement, soit vers des anneaux, 
-lorsque par exemple un polygone contient un trou à l'intérieur
+#dans l'arborescence d'un geojson, il y a "coordinates", qui mène soit 
+#vers une liste de couple de coordonnées directement, soit vers des anneaux, 
+#lorsque par exemple un polygone contient un trou à l'intérieur
 # ------------------------------------------
 def total_coords_count(geom):
     if isinstance(geom, Polygon):
